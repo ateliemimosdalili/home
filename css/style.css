@@ -1,0 +1,231 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgb(28, 141, 240) 50%, rgb(101, 9, 101)); 
+    background: cover;
+    padding: 10px 10px;   
+}
+
+header {
+    background-image: linear-gradient(90deg, #F0E68C, white );
+    width: 100%;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+
+.center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Lobster', sans-serif;
+}
+
+#buterfly {
+    width: 60px;
+}
+
+.nome-logo {
+    font-size: 24px;
+    font-weight: 800;
+    margin-left: 40px;
+    padding: 5px 5px;
+}
+
+#title-main {
+    color: transparent;
+    background-image:  linear-gradient(90deg, rgb(28, 141, 240) 50%, rgb(101, 9, 101));
+    background-clip: text;
+    -webkit-background-clip: text;    
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: sans-serif;
+}
+
+.redes-sociais a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7a38ac;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    fill: #fff;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
+    text-shadow: 0 3px 5px rgb(0, 0, 0, 0.3);    
+}
+
+.redes-sociais a:not(:last-child){
+    margin-right: 10px;
+}
+
+.redes-sociais a:hover .ballon{
+    top: -35px;
+    opacity: 1;
+}
+
+.redes-sociais svg {
+    height: 20px;
+    filter: drop-shadow(0 5px 10px rgb(0,0,0.2));
+}
+
+.redes-sociais .ballon {
+    position: absolute;
+    top: -25px;
+    width: 140px;
+    height: 28px;
+    opacity: 0;
+    border-radius: 30px;
+    transition: top .2s ease-in-out, opacity .2s ease-in-out;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,.2));
+}
+
+#wpp {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.redes-sociais .name {
+    position: relative;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7a38ac;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.redes-sociais .name::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color:  #7a38ac;
+    transform: rotate(45deg);
+    bottom: -5px;
+    border-radius: 4px;
+}
+
+.redes-sociais a.whatsapp,
+.redes-sociais a.whatsapp .name,
+.redes-sociais a.whatsapp .name::before{
+    background-color: #25D366;
+}
+
+.instagram {
+    margin-left: 700px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px 30px;   
+    margin-top: 10px;
+}
+
+.main {
+    display:flex;
+    flex-direction: row;
+    font-family: 'Lobster', sans-serif;    
+}
+
+#img-trabalhos {
+    border-radius: 10px;
+    width: 250px;
+}
+
+.frases {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto {
+    font-size: 28px;
+    filter: drop-shadow(0 3px 3px rgba(255, 255, 255, 0.9));
+    margin-left: 20px;
+    margin-top: 35px
+}
+
+ul {
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.logo-silhouette {
+    align-items: center;
+}
+
+#img-silhouette {
+    width: 300px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.menu-orcamento {
+    display: flex;
+    width: 250px;
+    background-image: linear-gradient(90deg, #F0E68C, white );
+    border-radius: 10px;
+    height: 70px; 
+    border: 3px solid rgba(39, 38, 38, 0.794); 
+    margin-top: 10px;
+    align-items: center;
+}
+
+.btn-orcamento {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 15px;
+    background-image:  linear-gradient(90deg, rgb(28, 141, 240) 50%, rgb(101, 9, 101));
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-top: 15px;
+    margin-left: 20px;
+    cursor: pointer;
+    width: 200px;
+    margin-bottom: 15px;
+    
+}
+
+.btn-orcamento:hover {
+    animation-name: botao;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    box-shadow: 0 0 20px 10px rgb(27, 86, 138) ;
+}
+
+@keyframes botao {
+    0% {
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+
